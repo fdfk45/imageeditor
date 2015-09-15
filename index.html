@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+       <meta charset="utf-8">
+       <meta name="keywords" content="image, image-editor,editor,kufogbe mawuli,html5 canvas,canvas">
+       <meta name="description" content="Image Editor developed with HTML5 Canvas and Javascript">
+       <title>Image Editor</title>
+       <link rel="stylesheet" href="css/main.css">
+    </head>
+      
+      <body>
+          
+          <nav>
+             <li><a href="#" id="edit">Edit</a></li>
+             <li><a href="#" id="draw">Draw</a></li>
+             <li><a href="#" id="save">Save</a></li>
+          </nav>
+      
+          <div id="edit-container">
+          <table>
+              <tr>
+                  <td>
+          <button id="normal" class="edit" disabled="disabled">Normal</button>
+          <button id="grayscale" class="edit" disabled="disabled">Grayscale</button>
+          <button id="sepia"  class="edit" disabled="disabled">Sepia</button>
+          <button id="invert"  class="edit" disabled="disabled">Invert</button>
+          <button id="brightness"  class="edit" disabled="disabled">Brightness</button>
+          <button id="contrast"  class="edit" disabled="disabled">Contrast</button>
+          <button id="img-resize"  class="edit" disabled="disabled">Image Resize</button>
+                  </td>
+              </tr>
+              <tr>
+                 <td>
+                   <button id="flipX" class="edit" disabled="disabled"><span>&harr;</span>Flip Horizontal</button>
+                  <button id="flipY" class="edit" disabled="disabled"><span>&#8597;</span>Flip Vertical</button>
+                  <button id="rotate90" class="edit" disabled="disabled"><span>&#8631;</span>Rotate 90</button>
+                 <button id="rotate180" class="edit" disabled="disabled"><span>&#8635;</span>Rotate 180</button>
+                 <button id="rotate270" class="edit" disabled="disabled"><span>&#8631;</span>Rotate 270</button>
+                  <button id="rotate360" class="edit" disabled="disabled"><span>&#8635;</span>Rotate 360</button>
+                 </td>
+              </tr>
+          </table>
+              <span title="close" id="edit-close">&#10006;</span>
+          </div>
+          
+          <div id="draw-container">
+            <div id="crayon" class="draw" title="Draw with the crayon on the canvas">
+                  <span class="icon">&#9998;</span>
+                  <span>Crayon</span>
+              </div>
+              
+              <div id="color-body" class="draw">
+              <input type="color" class="draw" id="color" title="Select a color and draw with it">
+              <label for="color" title="Select a color and draw with it">Select Color</label>
+              </div>
+              
+             <div id="eraser" class="draw" title="Eraser what you have draw">
+                <span class="icon">&#10065;</span> 
+                <span>Eraser</span>
+              </div>
+              
+              <div id="crayon-size" class="draw" title="Increase the crayon size">
+                <span class="icon">&#9999;</span>
+                <span>Crayon Size</span>
+              </div>
+              
+              <div id="fill-canvas" class="draw" title="Fill the canvas with different colors based on the one you select">
+                  <span class="icon">&#8718;</span>
+                  <span id="fill-text">Fill Canvas</span>
+              </div>
+              
+              <span title="close" id="draw-close">&#10006;</span>
+          </div>
+                   
+          <canvas id="canvas" width="1040" height="580">
+          
+          </canvas>
+                    
+          <input type="file" id="upload-btn">
+          
+          <div id="resize-dialog">
+           <span title="close" id="resize-close">&#10006;</span>
+           <h1>Resize Image</h1>
+              <div id="resize-body">
+                 <table>
+                     <tr>
+                        <td><label for="resize-horizon">Horizontal:</label>
+                            <input type="number" value="1040" min="0" max="1040" id="resize-horizon">
+                         </td>
+                     </tr>  
+                     
+                     <tr>
+                        <td><label for="resize-vertical">Vertical:</label>
+                            <input type="number" value="580" min="0" max="580" id="resize-vertical">
+                         </td>
+                     </tr> 
+                     <tr>
+                         <td>
+                       <button id="resize-ok">Ok</button>
+                       <button id="resize-cancel">Cancel</button>
+                         </td>
+                     </tr>
+                 </table>
+              </div>
+          </div>
+          
+          <img src="" id="currentImage">    
+          
+          <div id="save-dialog">
+              <span title="close" id="save-close">&#10006;</span>
+              <h1>Save As</h1>
+             <div id="save-body">
+                <table>
+                   <tr>
+                      <td><label for="image-name">File name:</label> <input type="text" id="image-name"></td> 
+                   </tr>
+                    
+                    <tr>
+                      <td><label for="image-type">Save as type: </label>
+                          
+                          <select id="image-type">
+                              
+                              <option Selected value="png">PNG (*.png)</option>
+                              <option value="jpg">JPEG (*.jpg)</option>
+                          
+                        </select>
+                      </td> 
+                   </tr> 
+                    
+                    <tr>
+                        <td>
+                        <label for="image-quality">Picture Quality:</label>
+                        <input type="number" id="image-quality" min="0" value="0" step=".1" max="1">
+                        </td>
+                    </tr>
+                </table> 
+                 
+                 <a href="#" id="save-btn">Save</a>
+                 <button id="cancel-btn">Cancel</button>
+             </div>
+          </div>
+          
+          <div id="loader">
+             <img src="img/loader.gif" alt="loader">
+             <h1>Loading</h1>
+          </div>
+          
+          <div id="cs-dialog">
+              <span title="close" id="cs-close">&#10006;</span>
+              <label for="c-size">Increase Crayon Size</label>
+              <input type="range" min="0" value="5" max="20" id="c-size">
+              <output id="output-size"></output>
+          </div>
+          
+          <div id="clear-image-dialog">
+          
+               <h1>Are you sure you want to clear this image</h1>
+              
+                <button id="clear-image-yes">Yes</button>
+              
+                <button id="clear-image-no">No</button>
+
+          </div> 
+          
+          <div id="clear-draw-dialog">
+          
+               <h1>Are you sure you want to clear the canvas</h1>
+              
+                <button id="clear-draw-yes">Yes</button>
+              
+                <button id="clear-draw-no">No</button>
+
+          </div>
+          
+          <div id="download-success">
+              
+              <span title="close" id="download-success-close">&#10006;</span>
+            
+              <h2>Image Is Downloaded To Your Download Directory</h2>
+          
+          </div>
+          
+          <div id="overlay"></div>
+          
+          <p id="author">Developed with &hearts; By <a href="http://ckm100.github.io" target="_blank">Kufogbe Mawuli</a></p>
+
+          
+       <script src="js/main.js"></script>
+          
+      </body>
+  </html>
+

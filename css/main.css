@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+#overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:1000px;
+    position: absolute;
+    z-index: 100;
+    background: #333;
+    opacity: 0.5;
+    display: none;
+}
+
+#currentImage {
+    display: none;
+}
+
+body {
+    background: #454553;
+    background: url(../img/pattern.png) repeat;
+    color: #fff;
+}
+
+nav {
+    width: 1044px;
+    height: 50px;
+    display: block;
+    margin: 20px auto;
+    color: #fff;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+
+nav li:first-child {
+    background: #4AA0D5;
+}
+
+nav li a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    display: block;
+}
+
+button:disabled {
+    opacity: 0.7;
+}
+
+#edit-container {
+    width: 1044px;
+    height: 100px;
+    margin: 0 auto;
+    background: #4AA0D5;
+    margin-top: -12px;
+    display: block;
+    position: relative;
+}
+
+#edit-close {
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: -4px;
+    top: 85px;
+    z-index: 10;
+    background: #000;
+    color: #4AA0D5;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    opacity: 0;
+    transition: all 2s;
+}
+
+#edit-container button {
+    display: inline-block;
+    border: 0;
+    background: #454553;
+    margin-top: 5px;
+    padding: 10px;
+    height: 40px;
+    color: #fff;
+}
+
+#draw-container {
+    width: 1040px;
+    margin: 0 auto; 
+    height: 100px;
+    background: #4AA0D5;
+    margin-top: -12px;
+    display: none;
+    position: relative;
+}
+
+#draw-close {
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: -3px;
+    top: 85px;
+    z-index: 10;
+    background: #000;
+    color: #4AA0D5;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    opacity: 0;
+    transition: all 4s;
+    clear: both;
+}
+
+#draw-container #crayon {
+    display: block;
+    margin-top: 15px;
+    margin-left: 10px;
+    display: block;
+    width: 80px;
+    height: 70px;
+    background: #454553;
+    color: #fff;
+    float: left;
+    cursor: default;
+}
+
+#draw-container span {
+    display: block;
+    text-align: center;
+}
+
+#draw-container .icon {   
+    color: #EA3556;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#draw-container #color-body {
+    display: block;
+    margin-left: 20px;
+    background: #454553;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    padding-top: 6px;
+    float: left;
+    margin-top: 15px;
+    cursor: default;
+}
+
+#draw-container label {
+    display: block;
+    margin-top: 15px;
+}
+
+#draw-container #color {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    cursor: default;
+}
+
+#draw-container #eraser {
+    display: block;
+    margin-top: 15px;
+    display: block;
+    width: 80px;
+    height: 70px;
+    background: #454553;
+    color: #fff;
+    float: left;
+    margin-left: 20px;
+    cursor: default;
+}
+
+#draw-container #crayon-size {
+    display: block;
+    margin-top: 15px;
+    display: block;
+    width: 100px;
+    height: 70px;
+    background: #454553;
+    color: #fff;
+    float: left;
+    margin-left: 20px;
+    cursor: default;
+}
+
+#draw-container #fill-canvas {
+    display: block;
+    margin-top: 15px;
+    display: block;
+    width: 80px;
+    height: 70px;
+    background: #454553;
+    color: #fff;
+    float: left;
+    margin-left: 20px;
+    cursor: default;
+}
+
+#canvas {
+    border: 2px solid #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: default;
+    position: relative;
+}
+
+#upload-btn {
+    display: block;
+    width: 1040px;
+    height: 40px;
+    background: #4AA0D5;
+    margin: 20px auto;
+    outline: none;
+    color: #4AA0D5;  
+    cursor: pointer;
+}
+
+#upload-btn::before {
+    content: "Upload Image";
+    display: block;
+    background: #4AA0D5;
+    width: 1040px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    z-index: 100;
+}
+
+#loader {
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    display: none;
+    z-index: 100;
+    transition: all 2s;
+}
+
+#resize-dialog {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    z-index: 400;
+    top: 40%;
+    left: 35%;
+    background: #333;
+    color: #fff;
+    display: none;
+    color: #4AA0D5;
+}
+
+#resize-dialog h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#resize-close, #download-success-close {
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: -4px;
+    top: -2px;
+    z-index: 10;
+    background: #000;
+    color: #4AA0D5;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+#resize-body {
+    color: #fff;
+    width: 290px;
+    height: 120px;
+    margin: 10px auto;
+}
+
+#resize-body table tr:nth-child(1) label {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    margin-left: 60px;
+}
+
+#resize-body table tr:nth-child(2) label {
+    display: block;
+    float: left;
+    margin-right: 40px;
+    margin-left: 60px;
+}
+
+#resize-body button {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background: #555;
+    color: #fff;
+    outline: 0;
+}
+
+#resize-body button:active {
+    background: #4AA0D5;
+}
+
+#resize-horizon {
+   width: 70px;   
+}
+
+#resize-vertical {
+   width: 70px;
+}
+
+#resize-ok {
+   margin-left:50px;
+}
+
+/** Problem fixed for firefox **/
+table tr td input,table tr td select {
+    float: left;
+}
+
+#save-dialog {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    z-index: 400;
+    background: #333;
+    color: #4AA0D5;
+    display: none;
+    text-align: center;
+}
+
+#save-dialog h1 {
+    margin-top: 10px;
+}
+
+#save-close {
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: -4px;
+    top: -2px;
+    z-index: 10;
+    background: #000;
+    color: #4AA0D5;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+#save-body {
+    width: 390px;
+    height: 250px;
+    color: #fff;
+    margin: 10px auto;
+}
+
+#save-body table {
+    padding-top: 100px;
+}
+
+#save-btn {
+    margin-left: 250px;
+    text-decoration: none;
+    cursor: default;
+    background: #555;
+    color: #fff;
+    padding: 10px;
+}
+
+#save-btn:active , #cancel-btn:active {
+   background: #4AA0D5;
+}
+
+#cancel-btn {
+    background: #555;
+    color: #fff;
+    border: 0;
+    padding: 9px;
+    outline: 0;
+    margin-top: 20px;
+}
+
+table tr:nth-child(1) label {
+    display: block;
+    float: left;
+    margin-right: 56px;
+}
+
+table tr:nth-child(1) #image-name {
+    display: block;
+    width: 200px;
+}
+
+table tr:nth-child(2) label {
+    display: block;
+    float: left;
+    margin-right: 33px;
+}
+
+table tr:nth-child(2) #image-type {
+    display: block;
+    width: 200px;
+}
+
+table tr:nth-child(3) label {
+    display: block;
+    float: left;
+    margin-right: 22px;
+}
+
+table tr:nth-child(3) #image-quality {
+    display: block;
+    width: 200px;
+}
+
+#cs-dialog {
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background: #333;
+    color: #4AA0D5;
+    display: none;
+    z-index: 400;
+}
+
+#cs-dialog label {
+    display: block;
+    text-align: center;
+}
+
+#cs-dialog #c-size {
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#cs-close {
+    display: block;
+    text-align: center;
+    position: absolute;
+    right: -4px;
+    top: -2px;
+    z-index: 10;
+    background: #000;
+    color: #4AA0D5;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+#clear-image-dialog,#clear-draw-dialog {
+    background: #333;
+    color:#4AA0D5;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    text-align: center;
+    z-index: 400;
+    display: none;
+}
+
+#clear-image-dialog h1,#clear-draw-dialog h1 {
+    margin-top: 20px;
+}
+
+#clear-image-dialog button,#clear-draw-dialog button {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background: #555;
+    color: #fff;
+}
+
+#clear-image-dialog button:active,#clear-draw-dialog button:active {
+    background: #4AA0D5;
+}
+
+#author {
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#author a {
+    text-decoration: none;
+    color: #4AA0D5;
+}
+
+#author a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.activeColor {
+    background: #128061 !important;
+}
+
+#download-success {
+    width: 470px;
+    height: 100px;
+    padding: 40px;
+    background: #333;
+    color: #4AA0D5;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    border-bottom: 3px solid #4AA0D5;
+    display: none;
+    -moz-transition: all 12s ease;
+    -webkit-transition: all 12s ease;
+    transition: all 12s ease;
+}
+
+@-webkit-keyframes downloadSuccess {
+    
+    0% {
+        top: -20%;
+    }
+    
+    50%,70%,80% {
+        top: 35%;
+    }
+    
+    60%,100% {
+        top: 40%;
+    }
+    
+}
+
+@keyframes downloadSuccess {
+    
+    0% {
+        top: -20%;
+    }
+    
+    50%,70%,80% {
+        top: 35%;
+    }
+    
+    60%,100% {
+        top: 40%;
+    }
+    
+}
+
+
+
+
+
