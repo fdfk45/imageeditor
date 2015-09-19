@@ -514,7 +514,10 @@
         var editNav,
             drawNav,
             editContainer,
-            drawContainer;
+            drawContainer,
+            uploadContain;
+        
+         uploadContain = document.getElementById("upload");
         
          editNav =  document.getElementById('edit');
                 
@@ -554,7 +557,7 @@
              
          uploadBtn.style.cursor = 'pointer';
             
-         uploadBtn.style.display = 'block';
+         uploadContain.style.display = 'block';
              
          canvas.style.background = 'none';
             
@@ -605,7 +608,7 @@
             
             ctx.fill();
                                     
-            uploadBtn.style.display = 'none';
+            uploadContain.style.display = 'none';
                         
             canvas.style.border = '2px solid #000';
             
