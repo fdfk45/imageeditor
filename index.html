@@ -9,11 +9,12 @@
     </head>
       
       <body>
-          
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://imageeditor.github.io" data-text="Image Editor made with Html5 Canvas API and Javascript" data-via="kufogbe_mawuli" data-size="large" data-hashtags="html5,canvas,javascript,app,editor">Tweet</a>
           <nav>
              <li><a href="#" id="edit">Edit</a></li>
              <li><a href="#" id="draw">Draw</a></li>
              <li><a href="#" id="save">Save</a></li>
+             <li><div id="upload"><span>Open File</span><input type="file" id="upload-btn"></div></li>
           </nav>
       
           <div id="edit-container">
@@ -75,8 +76,6 @@
           <canvas id="canvas" width="1040" height="580">
           
           </canvas>
-                    
-          <input type="file" id="upload-btn">
           
           <div id="resize-dialog">
            <span title="close" id="resize-close">&#10006;</span>
@@ -184,8 +183,10 @@
           
           <p id="author">Developed with &hearts; By <a href="http://ckm100.github.io" target="_blank">Kufogbe Mawuli</a></p>
 
-          
+
        <script src="js/main.js"></script>
+        
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
           
       </body>
   </html>

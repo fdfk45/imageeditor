@@ -220,28 +220,22 @@ button:disabled {
     position: relative;
 }
 
-#upload-btn {
-    display: block;
-    width: 1040px;
-    height: 40px;
-    background: #4AA0D5;
-    margin: 20px auto;
-    outline: none;
-    color: #4AA0D5;  
-    cursor: pointer;
+#upload {
+    background: #e6e6e6;
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    color: #000;
 }
 
-#upload-btn::before {
-    content: "Upload Image";
-    display: block;
-    background: #4AA0D5;
-    width: 1040px;
-    height: 50px;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    color: #fff;
-    z-index: 100;
+#upload span {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+}
+
+#upload-btn {
+    opacity: 0;
 }
 
 #loader {
