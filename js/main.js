@@ -634,528 +634,58 @@
         
         function subNav() {
             
-            
-          function editNav() {
-              
-             var editClass;
+            var editClass,
                 
+                drawClass,
+                
+                e = d = 0,
+                 
+                c,
+                
+                f;
+        
+                          
             editClass = document.querySelectorAll('.edit');
             
-              editClass[0].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                  
-                editClass[12].classList.remove('activeColor');
+            drawClass = document.querySelectorAll('.draw');
             
-                
-            },false); 
-            
-            editClass[1].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);
-            
-            editClass[2].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);
-            
-            editClass[3].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);
-            
-            editClass[4].addEventListener('click', function() {
-                
-                 this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                
-                editClass[3].classList.remove('activeColor');
-                                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-            
-                
-            },false);
-            
-            editClass[5].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-            
-                
-            },false);
-            
-            editClass[6].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);
-            
-            editClass[7].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);
-            
-            editClass[8].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);
-            
-            editClass[9].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);
-            
-            editClass[10].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);
-                
-            
-            editClass[11].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[12].classList.remove('activeColor');
-                
-                
-            },false);  
               
-              editClass[12].addEventListener('click', function() {
-                
-                this.classList.add('activeColor');
-                
-                editClass[0].classList.remove('activeColor');
-                
-                editClass[1].classList.remove('activeColor');
-                
-                editClass[2].classList.remove('activeColor');
-                                
-                editClass[3].classList.remove('activeColor');
-                
-                editClass[4].classList.remove('activeColor');
-                
-                editClass[5].classList.remove('activeColor');
-                
-                editClass[6].classList.remove('activeColor');
-                
-                editClass[7].classList.remove('activeColor');
-                
-                editClass[8].classList.remove('activeColor');
-                
-                editClass[9].classList.remove('activeColor');
-                
-                editClass[10].classList.remove('activeColor');
-                
-                editClass[11].classList.remove('activeColor');
-                
-                
-            },false);
-                
-            }
-            editNav();
-            
-            function drawNav() {
-                
-                var drawClass = document.querySelectorAll('.draw');
-                
-                drawClass[0].addEventListener('click', function() {
+              for(; e < editClass.length; e++) {
+                  
+                editClass[e].addEventListener("click", function() {
+                                    
+                     for(c = 0; c < editClass.length; c++) {
+                         
+                         editClass[c].classList.remove('activeColor');
+                         
+                     }
                     
                     this.classList.add('activeColor');
-                    
-                    drawClass[1].classList.remove('activeColor');
-                    
-                    drawClass[2].classList.remove('activeColor');
-                    
-                    drawClass[3].classList.remove('activeColor');
-                    
-                    drawClass[4].classList.remove('activeColor');
-                    
-                    drawClass[5].classList.remove('activeColor');
-                    
-                },false); 
-                
-                drawClass[1].addEventListener('click', function() {
-                    
-                    this.classList.add('activeColor');
-                    
-                    drawClass[0].classList.remove('activeColor');
-                    
-                    drawClass[2].classList.remove('activeColor');
-                    
-                    drawClass[3].classList.remove('activeColor');
-                    
-                    drawClass[4].classList.remove('activeColor');
-                    
-                    drawClass[5].classList.remove('activeColor');
-                    
-                    
-                },false); 
-                
-                drawClass[2].addEventListener('click', function() {
-                    
-                    this.classList.add('activeColor');
-                    
-                    drawClass[0].classList.remove('activeColor');
-                    
-                    drawClass[1].classList.remove('activeColor');
-                    
-                    drawClass[3].classList.remove('activeColor');
-                    
-                    drawClass[4].classList.remove('activeColor');
-                    
-                    drawClass[5].classList.remove('activeColor');
-                    
-                    
-                },false);  
-                
-                drawClass[3].addEventListener('click', function() {
-                    
-                    this.classList.add('activeColor');
-                    
-                    drawClass[0].classList.remove('activeColor');
-                    
-                    drawClass[1].classList.remove('activeColor');
-                    
-                    drawClass[2].classList.remove('activeColor');
-                    
-                    drawClass[4].classList.remove('activeColor');
-                    
-                    drawClass[5].classList.remove('activeColor');
-                    
-                    
-                },false); 
-                
-                drawClass[4].addEventListener('click', function() {
-                    
-                    this.classList.add('activeColor');
-                    
-                    drawClass[0].classList.remove('activeColor');
-                    
-                    drawClass[1].classList.remove('activeColor');
-                    
-                    drawClass[2].classList.remove('activeColor');
-                    
-                    drawClass[3].classList.remove('activeColor');
-                    
-                    drawClass[5].classList.remove('activeColor');
-                    
-                    
-                },false); 
-                
-                drawClass[5].addEventListener('click', function() {
-                    
-                    this.classList.add('activeColor');
-                    
-                    drawClass[0].classList.remove('activeColor');
-                    
-                    drawClass[1].classList.remove('activeColor');
-                    
-                    drawClass[2].classList.remove('activeColor');
-                    
-                    drawClass[3].classList.remove('activeColor');
-                    
-                    drawClass[4].classList.remove('activeColor');
                     
                     
                 },false);
-                
-            }
+                  
+              }
             
-            drawNav();
+               for(; d < drawClass.length; d++) {
+                  
+                drawClass[d].addEventListener("click", function() {
+                                    
+                     for(f = 0; f < drawClass.length; f++) {
+                         
+                         drawClass[f].classList.remove('activeColor');
+                         
+                     }
+                    
+                    this.classList.add('activeColor');
+                    
+                    
+                },false);
+                  
+              }
+                            
+    
+                    
         }
         
         subNav();
