@@ -5,29 +5,25 @@
     font-size: 16px;
     font-family: sans-serif;
 }
-
 #overlay {
     top: 0;
     left: 0;
     width: 100%;
-    height:1000px;
+    height: 1000px;
     position: absolute;
     z-index: 100;
     background: #333;
     opacity: 0.5;
     display: none;
 }
-
 #currentImage {
     display: none;
 }
-
 body {
     background: #454553;
     background: url(../img/pattern.png) repeat;
     color: #fff;
 }
-
 nav {
     width: 1044px;
     height: 50px;
@@ -35,22 +31,18 @@ nav {
     margin: 20px auto;
     color: #fff;
 }
-
 nav li {
     list-style: none;
     display: inline-block;
     padding: 20px;
     cursor: pointer;
 }
-
 nav li:first-child {
     background: #4AA0D5;
 }
-
 button:disabled {
     opacity: 0.7;
 }
-
 #edit-container {
     width: 1044px;
     height: 100px;
@@ -60,7 +52,6 @@ button:disabled {
     display: block;
     position: relative;
 }
-
 #edit-close {
     text-align: center;
     position: absolute;
@@ -75,7 +66,6 @@ button:disabled {
     border-radius: 50px;
     display: none;
 }
-
 #edit-container button {
     display: inline-block;
     border: 0;
@@ -85,17 +75,15 @@ button:disabled {
     height: 40px;
     color: #fff;
 }
-
 #draw-container {
     width: 1040px;
-    margin: 0 auto; 
+    margin: 0 auto;
     height: 100px;
     background: #4AA0D5;
     margin-top: -12px;
     display: none;
     position: relative;
 }
-
 #draw-close {
     text-align: center;
     position: absolute;
@@ -111,7 +99,6 @@ button:disabled {
     clear: both;
     display: none;
 }
-
 #draw-container #crayon {
     display: block;
     margin-top: 15px;
@@ -124,18 +111,15 @@ button:disabled {
     float: left;
     cursor: default;
 }
-
 #draw-container span {
     display: block;
     text-align: center;
 }
-
-#draw-container .icon {   
+#draw-container .icon {
     color: #EA3556;
     font-weight: bolder;
     font-size: 40px;
 }
-
 #draw-container #color-body {
     display: block;
     margin-left: 20px;
@@ -148,20 +132,17 @@ button:disabled {
     margin-top: 15px;
     cursor: default;
 }
-
 #draw-container label {
     display: block;
     margin-top: 15px;
 }
-
 #draw-container #color {
-    display: block; 
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     cursor: default;
 }
-
 #draw-container #eraser {
     display: block;
     margin-top: 15px;
@@ -174,7 +155,6 @@ button:disabled {
     margin-left: 20px;
     cursor: default;
 }
-
 #draw-container #crayon-size {
     display: block;
     margin-top: 15px;
@@ -187,7 +167,6 @@ button:disabled {
     margin-left: 20px;
     cursor: default;
 }
-
 #draw-container #fill-canvas {
     display: block;
     margin-top: 15px;
@@ -200,7 +179,6 @@ button:disabled {
     margin-left: 20px;
     cursor: default;
 }
-
 #canvas {
     border: 2px solid #fff;
     display: block;
@@ -209,7 +187,6 @@ button:disabled {
     cursor: default;
     position: relative;
 }
-
 #upload {
     background: #e6e6e6;
     width: 100px;
@@ -217,17 +194,14 @@ button:disabled {
     position: relative;
     color: #000;
 }
-
 #upload span {
     position: absolute;
     left: 10px;
     top: 4px;
 }
-
 #upload-btn {
     opacity: 0;
 }
-
 #loader {
     position: absolute;
     left: 45%;
@@ -236,7 +210,6 @@ button:disabled {
     z-index: 100;
     transition: all 2s;
 }
-
 #resize-dialog {
     width: 300px;
     height: 150px;
@@ -249,13 +222,11 @@ button:disabled {
     display: none;
     color: #4AA0D5;
 }
-
 #resize-dialog h1 {
     text-align: center;
     margin-top: 10px;
 }
-
-#resize-close, 
+#resize-close,
 #download-success-close {
     display: block;
     text-align: center;
@@ -270,28 +241,24 @@ button:disabled {
     height: 20px;
     border-radius: 50px;
 }
-
 #resize-body {
     color: #fff;
     width: 290px;
     height: 120px;
     margin: 10px auto;
 }
-
 #resize-body table tr:nth-child(1) label {
     display: block;
     float: left;
     margin-right: 20px;
     margin-left: 60px;
 }
-
 #resize-body table tr:nth-child(2) label {
     display: block;
     float: left;
     margin-right: 40px;
     margin-left: 60px;
 }
-
 #resize-body button {
     margin-top: 20px;
     width: 100px;
@@ -301,29 +268,25 @@ button:disabled {
     color: #fff;
     outline: 0;
 }
-
 #resize-body button:active {
     background: #4AA0D5;
 }
-
 #resize-horizon {
-   width: 70px;   
+    width: 70px;
 }
-
 #resize-vertical {
-   width: 70px;
+    width: 70px;
 }
-
 #resize-ok {
-   margin-left:50px;
+    margin-left: 50px;
 }
 
 /** Bug fixed in firefox **/
+
 table tr td input,
 table tr td select {
     float: left;
 }
-
 #save-dialog {
     width: 400px;
     height: 300px;
@@ -336,11 +299,9 @@ table tr td select {
     display: none;
     text-align: center;
 }
-
 #save-dialog h1 {
     margin-top: 10px;
 }
-
 #save-close {
     display: block;
     text-align: center;
@@ -355,18 +316,15 @@ table tr td select {
     height: 20px;
     border-radius: 50px;
 }
-
 #save-body {
     width: 390px;
     height: 250px;
     color: #fff;
     margin: 10px auto;
 }
-
 #save-body table {
     padding-top: 100px;
 }
-
 #save-btn {
     margin-left: 250px;
     text-decoration: none;
@@ -375,12 +333,10 @@ table tr td select {
     color: #fff;
     padding: 10px;
 }
-
-#save-btn:active, 
+#save-btn:active,
 #cancel-btn:active {
-   background: #4AA0D5;
+    background: #4AA0D5;
 }
-
 #cancel-btn {
     background: #555;
     color: #fff;
@@ -389,40 +345,33 @@ table tr td select {
     outline: 0;
     margin-top: 20px;
 }
-
 table tr:nth-child(1) label {
     display: block;
     float: left;
     margin-right: 56px;
 }
-
 table tr:nth-child(1) #image-name {
     display: block;
     width: 200px;
 }
-
 table tr:nth-child(2) label {
     display: block;
     float: left;
     margin-right: 33px;
 }
-
 table tr:nth-child(2) #image-type {
     display: block;
     width: 200px;
 }
-
 table tr:nth-child(3) label {
     display: block;
     float: left;
     margin-right: 22px;
 }
-
 table tr:nth-child(3) #image-quality {
     display: block;
     width: 200px;
 }
-
 #cs-dialog {
     width: 250px;
     height: 70px;
@@ -434,19 +383,16 @@ table tr:nth-child(3) #image-quality {
     display: none;
     z-index: 400;
 }
-
 #cs-dialog label {
     display: block;
     text-align: center;
 }
-
 #cs-dialog #c-size {
     display: inline-block;
     text-align: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-
 #cs-close {
     display: block;
     text-align: center;
@@ -461,11 +407,10 @@ table tr:nth-child(3) #image-quality {
     height: 20px;
     border-radius: 50px;
 }
-
 #clear-image-dialog,
 #clear-draw-dialog {
     background: #333;
-    color:#4AA0D5;
+    color: #4AA0D5;
     width: 400px;
     height: 100px;
     position: absolute;
@@ -475,12 +420,10 @@ table tr:nth-child(3) #image-quality {
     z-index: 400;
     display: none;
 }
-
 #clear-image-dialog h1,
 #clear-draw-dialog h1 {
     margin-top: 20px;
 }
-
 #clear-image-dialog button,
 #clear-draw-dialog button {
     margin-top: 20px;
@@ -490,37 +433,27 @@ table tr:nth-child(3) #image-quality {
     background: #555;
     color: #fff;
 }
-
 #clear-image-dialog button:active,
 #clear-draw-dialog button:active {
     background: #4AA0D5;
 }
-
 #author {
     color: #fff;
     text-align: center;
     margin-top: 40px;
 }
-
 #author a {
     text-decoration: none;
     color: #4AA0D5;
 }
-
 #author a:hover {
     text-decoration: underline;
     color: #000;
 }
-
 .activeColor {
     background: #128061 !important;
 }
-
-#resize-horizontal, #resize-vertical {
+#resize-horizontal,
+#resize-vertical {
     width: 100px;
 }
-
-
-
-
-
