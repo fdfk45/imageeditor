@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: "Seguoe UI", sans-serif;
 }
 #overlay {
     top: 0;
@@ -22,13 +22,15 @@
 body {
     background: #454553;
     background: url(../img/pattern.png) repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 nav {
-    width: 1044px;
+    width: 1300px;
     height: 50px;
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
     color: #fff;
 }
 nav li {
@@ -44,7 +46,7 @@ button:disabled {
     opacity: 0.7;
 }
 #edit-container {
-    width: 1044px;
+    width: 1300px;
     height: 100px;
     margin: 0 auto;
     background: #4AA0D5;
@@ -76,7 +78,7 @@ button:disabled {
     color: #fff;
 }
 #draw-container {
-    width: 1040px;
+    width: 1297px;
     margin: 0 auto;
     height: 100px;
     background: #4AA0D5;
@@ -105,7 +107,7 @@ button:disabled {
     margin-left: 10px;
     display: block;
     width: 80px;
-    height: 70px;
+    height: 74px;
     background: #454553;
     color: #fff;
     float: left;
@@ -125,7 +127,7 @@ button:disabled {
     margin-left: 20px;
     background: #454553;
     width: 100px;
-    height: 70px;
+    height: 74px;
     text-align: center;
     padding-top: 6px;
     float: left;
@@ -148,7 +150,7 @@ button:disabled {
     margin-top: 15px;
     display: block;
     width: 80px;
-    height: 70px;
+    height: 74px;
     background: #454553;
     color: #fff;
     float: left;
@@ -160,7 +162,7 @@ button:disabled {
     margin-top: 15px;
     display: block;
     width: 100px;
-    height: 70px;
+    height: 74px;
     background: #454553;
     color: #fff;
     float: left;
@@ -172,7 +174,7 @@ button:disabled {
     margin-top: 15px;
     display: block;
     width: 80px;
-    height: 70px;
+    height: 74px;
     background: #454553;
     color: #fff;
     float: left;
